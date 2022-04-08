@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,7 +19,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpq-A8-0MC">
                                 <rect key="frame" x="107" y="423" width="200" height="50"/>
-                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="fkg-Se-ib9"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="gOJ-1N-XRn"/>
@@ -33,10 +34,10 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.46061491810442939" green="0.6142376214197246" blue="0.80995315313339233" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.52492204510633478" green="0.68825444635581368" blue="0.80995315313339233" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="wpq-A8-0MC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9fL-ql-1rm"/>
-                            <constraint firstItem="wpq-A8-0MC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mB4-v7-iPP"/>
+                            <constraint firstItem="wpq-A8-0MC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UMl-IU-OzL"/>
+                            <constraint firstItem="wpq-A8-0MC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vBg-kd-9A7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lzp-40-msd">
@@ -90,5 +91,8 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
