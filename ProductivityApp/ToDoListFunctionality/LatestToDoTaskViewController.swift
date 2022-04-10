@@ -27,6 +27,7 @@ class LatestToDoTaskViewController: UIViewController {
 
         getLatestToDoTaskItem()
         
+        // Create ring figure to animate.
         label.sizeToFit()
         view.addSubview(label)
         label.center = view.center
@@ -54,7 +55,7 @@ class LatestToDoTaskViewController: UIViewController {
     }
     
     @objc func animate() {
-        // Animate
+        // Animate ring.
         let animation = CABasicAnimation(keyPath: "strokeEnd")
         animation.toValue = 1
         animation.duration = 3
@@ -63,10 +64,9 @@ class LatestToDoTaskViewController: UIViewController {
         shape.add(animation, forKey: "animation")
     }
 
-    // Core Data
+    // Core Data related function:
 
     func getLatestToDoTaskItem() {
-        
         do {
             let request = ToDoListItem.fetchRequest() as NSFetchRequest<ToDoListItem>
             
@@ -85,10 +85,11 @@ class LatestToDoTaskViewController: UIViewController {
             
             DispatchQueue.main.async {
                 let label = UILabel(
-                    frame: CGRect(x: 0,
-                                  y: self.view.frame.size.height-200-self.view.safeAreaInsets.bottom,
-                                  width: self.view.frame.size.width,
-                                  height: 50))
+                    frame: CGRect(
+                        x: 0,
+                        y: self.view.frame.size.height-200-self.view.safeAreaInsets.bottom,
+                        width: self.view.frame.size.width,
+                        height: 50))
              
                 label.textAlignment = .center
                 label.text = textToAdd
@@ -99,7 +100,7 @@ class LatestToDoTaskViewController: UIViewController {
             }
         }
         catch {
-            // TODO handle error
+            print("Getting latest to-do item failed with error: \(error)")
         }
     }
 }

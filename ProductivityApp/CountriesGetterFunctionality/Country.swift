@@ -7,6 +7,8 @@
 
 import Foundation
 
+// Based on response from https://restcountries.com/v2/all
+
 struct Country: Decodable {
     var name: String?
     var capital: String?
@@ -17,5 +19,4 @@ struct Country: Decodable {
         case capital = "capital"
         case countryCode = "alpha3Code"
     }
-    
 }

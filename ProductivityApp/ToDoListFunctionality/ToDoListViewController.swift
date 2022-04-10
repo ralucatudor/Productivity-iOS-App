@@ -28,7 +28,7 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
         
         view.addSubview(tableView)
         
-        // Call for getting all items in the todo list, before setting up the table view.
+        // Call for getting all items in the to-do list, before setting up the table view.
         getAllToDoListItems()
         
         tableView.backgroundColor = UIColor("#6699ff")
@@ -76,7 +76,6 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
 
-        
         let model = models[indexPath.row]
         
         cell.textLabel?.text = "\u{2022} " + model.name!
@@ -154,7 +153,7 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
             }
         }
         catch {
-            // TODO handle error
+            print("Getting all to-do items failed with error: \(error)")
         }
     }
     
@@ -170,7 +169,7 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
             getAllToDoListItems()
         }
         catch {
-            // TODO handle error
+            print("Creating to-do item failed with error: \(error)")
         }
     }
     
@@ -182,7 +181,7 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
             getAllToDoListItems()
         }
         catch {
-            // TODO handle error
+            print("Deleting to-do item failed with error: \(error)")
         }
     }
     
@@ -195,7 +194,7 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
             getAllToDoListItems()
         }
         catch {
-            // TODO handle error
+            print("Updating to-do item failed with error: \(error)")
         }
     }
     

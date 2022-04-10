@@ -8,18 +8,19 @@
 import Foundation
 import Alamofire
 
-// https://restcountries.com/v2/all
 class AlamofireService {
+    // base API URL (without endpoint) used to make requests from
     private var baseUrl = ""
-    typealias countriesCallBack = (_ countries:[Country]?, _ status: Bool, _ message:String) -> Void
     
-    var callBack:countriesCallBack?
+    typealias countriesCallBack = (_ countries: [Country]?, _ status: Bool) -> Void
+    var callBack: countriesCallBack?
     
     init(baseUrl: String) {
         self.baseUrl = baseUrl
     }
     
     func getAllCountryNamesFrom(endpoint: String) {
+        // Make a GET request to the provided endpoint of the API.
         AF.request(
             self.baseUrl + endpoint,
             method: .get,
@@ -27,20 +28,25 @@ class AlamofireService {
             encoding: URLEncoding.default,
             headers: nil,
             interceptor: nil).response {
+                // Handle response.
                 (responseData) in
                 guard let data = responseData.data else {
-                    self.callBack?(nil, false, "")
+                    // Callback, set status to false.
+                    self.callBack?(nil, false)
                     return
                 }
                 do {
+                    // Using Codable, decode countries data.
                     let countries = try JSONDecoder().decode([Country].self, from: data)
-                    self.callBack?(countries, true,"")
+                    self.callBack?(countries, true)
                 } catch {
-                    self.callBack?(nil, false, error.localizedDescription)
+                    // Callback, set status to false.
+                    self.callBack?(nil, false)
                 }
             }
     }
     
+    // Provide closure to the request.
     func completionHandler(callBack: @escaping countriesCallBack) {
         self.callBack = callBack
     }

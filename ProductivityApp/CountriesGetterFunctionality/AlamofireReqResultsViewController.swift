@@ -17,12 +17,15 @@ class AlamofireReqResultsViewController: UIViewController {
         
         tblCountries.dataSource = self
 
+        // Set-up the service for requests.
         let alamofireService = AlamofireService(
             baseUrl: "https://restcountries.com/v2/")
         alamofireService.getAllCountryNamesFrom(endpoint: "all")
         
-        alamofireService.completionHandler { [weak self] (countries, status, message) in
+        alamofireService.completionHandler { [weak self] (countries, status) in
+            // If countries have been successfully received,
             if status {
+                // then set the `countries` global variable.
                 guard let self = self else { return }
                 guard let _countries = countries else { return }
                 self.countries = _countries
@@ -37,16 +40,15 @@ extension AlamofireReqResultsViewController : UITableViewDataSource {
         return countries.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "countrycell")
-        if cell == nil {
-            cell = UITableViewCell(style: .subtitle, reuseIdentifier: "countrycell")
-        }
-        
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = UITableViewCell(style: .subtitle,
+                                                    reuseIdentifier: "cell")
+
         let country = countries[indexPath.row]
         
-        cell?.textLabel?.text = (country.name ?? "") + " " + (country.countryCode ?? "")
-        cell?.detailTextLabel?.text = country.capital ?? ""
-        return cell!
+        cell.textLabel?.text = (country.name ?? "") + " " + (country.countryCode ?? "")
+        cell.detailTextLabel?.text = country.capital ?? ""
+        return cell
     }
 }

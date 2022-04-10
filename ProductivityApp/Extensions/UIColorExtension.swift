@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-// https://stackoverflow.com/questions/24263007/how-to-use-hex-color-values
+// Extension used for allowing hex string as parameter for `UIColor`.
+// Based on: https://stackoverflow.com/questions/24263007/how-to-use-hex-color-values
 
 extension UIColor {
   
