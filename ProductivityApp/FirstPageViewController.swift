@@ -17,6 +17,8 @@ class FirstPageViewController: UIViewController {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         return button
     }()
+    
+    let viewToAnimate = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +39,11 @@ class FirstPageViewController: UIViewController {
             width: view.frame.size.width-160,
             height: 50
         )
+        
+        viewToAnimate.backgroundColor = .link
+        viewToAnimate.center = view.center
+        view.addSubview(viewToAnimate)
+        animate()
     }
     
     @objc private func didTapPomodoroButton() {
@@ -49,15 +56,13 @@ class FirstPageViewController: UIViewController {
         present(navigationViewController, animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func animate() {
+        UIView.animate(withDuration: 2,
+                       animations: {
+                        self.viewToAnimate.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+                        self.viewToAnimate.center = self.view.center
+                       }, completion: { _ in
+                        self.viewToAnimate.removeFromSuperview()
+                    })
     }
-    */
-
 }

@@ -56,7 +56,7 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
             
             // if the text field is not empty, create item.
             // pay attention to possible memory leaks.
-            self?.createToDoListItem(name: text, details: "ceva")
+            self?.createToDoListItem(name: text)
         }))
         
         present(alert, animated: true)
@@ -110,7 +110,7 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
                 
                 // if the text field is not empty, create item.
                 // pay attention to possible memory leaks.
-                self?.updateToDoListItem(toDoListItem: selectedItem, newName: newName, newDetails: "ceva2")
+                self?.updateToDoListItem(toDoListItem: selectedItem, newName: newName)
             }))
             
             self.present(alert, animated: true)
@@ -139,11 +139,10 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-    func createToDoListItem(name: String, details: String) {
+    func createToDoListItem(name: String) {
         let newToDoListItem = ToDoListItem(context: context)
         // Assign the properties of the item.
         newToDoListItem.name = name
-        newToDoListItem.details = details
         newToDoListItem.createdAtDate = Date()
         // Save the item to the database.
         do {
@@ -169,10 +168,8 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func updateToDoListItem(toDoListItem: ToDoListItem,
-                            newName: String,
-                            newDetails: String) {
+                            newName: String) {
         toDoListItem.name = newName
-        toDoListItem.details = newDetails
         do {
             try context.save()
             // Refresh the `models` and reload the table view in UI.

@@ -18,7 +18,6 @@ extension ToDoListItem {
     
     @NSManaged public var name: String?
     @NSManaged public var createdAtDate: Date?
-    @NSManaged public var details: String?
 
 }
 

@@ -11,6 +11,7 @@
 		2882C03528003E020023AD62 /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2882C03428003E020023AD62 /* FirstPageViewController.swift */; };
 		2882C037280069C60023AD62 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2882C036280069C60023AD62 /* UIColorExtension.swift */; };
 		289E9A73280097D3007F4B4A /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289E9A72280097D3007F4B4A /* WebViewViewController.swift */; };
+		289E9A752800E340007F4B4A /* LatestToDoTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289E9A742800E340007F4B4A /* LatestToDoTaskViewController.swift */; };
 		28D1815F27FF66B600C256E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D1815E27FF66B600C256E9 /* AppDelegate.swift */; };
 		28D1816127FF66B600C256E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D1816027FF66B600C256E9 /* SceneDelegate.swift */; };
 		28D1816327FF66B600C256E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D1816227FF66B600C256E9 /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 		2882C03428003E020023AD62 /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
 		2882C036280069C60023AD62 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		289E9A72280097D3007F4B4A /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
+		289E9A742800E340007F4B4A /* LatestToDoTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestToDoTaskViewController.swift; sourceTree = "<group>"; };
 		28D1815B27FF66B600C256E9 /* ProductivityApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductivityApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28D1815E27FF66B600C256E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28D1816027FF66B600C256E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				2882C03428003E020023AD62 /* FirstPageViewController.swift */,
 				289E9A72280097D3007F4B4A /* WebViewViewController.swift */,
 				28D1816427FF66B600C256E9 /* Main.storyboard */,
+				289E9A742800E340007F4B4A /* LatestToDoTaskViewController.swift */,
 				28D1816A27FF66B800C256E9 /* Assets.xcassets */,
 				28D1816C27FF66B800C256E9 /* LaunchScreen.storyboard */,
 				28D1816F27FF66B800C256E9 /* Info.plist */,
@@ -173,6 +176,7 @@
 				28D1817727FF68D300C256E9 /* ToDoListItem+CoreDataClass.swift in Sources */,
 				2882C03528003E020023AD62 /* FirstPageViewController.swift in Sources */,
 				2882C037280069C60023AD62 /* UIColorExtension.swift in Sources */,
+				289E9A752800E340007F4B4A /* LatestToDoTaskViewController.swift in Sources */,
 				28D1817827FF68D300C256E9 /* ToDoListItem+CoreDataProperties.swift in Sources */,
 				2882C03328003D6C0023AD62 /* ToDoListViewController.swift in Sources */,
 				28D1816927FF66B600C256E9 /* ProductivityApp.xcdatamodeld in Sources */,

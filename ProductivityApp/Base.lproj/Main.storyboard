@@ -25,17 +25,34 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="gOJ-1N-XRn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="To Do List">
+                                <state key="normal" title="Full To Do List">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="JR6-ve-drZ" kind="show" id="wlr-FH-78f"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8I5-oS-wzK">
+                                <rect key="frame" x="107" y="723" width="200" height="50"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="RzH-zB-HS4"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="aCF-YT-ydq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Latest To-Do Task">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8b0-Fk-mkQ" kind="show" id="UUa-Q5-kZZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.52492204510633478" green="0.68825444635581368" blue="0.80995315313339233" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="8I5-oS-wzK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="300" id="3Yn-2Q-EhR"/>
+                            <constraint firstItem="8I5-oS-wzK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hm5-m8-jR8"/>
                             <constraint firstItem="wpq-A8-0MC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UMl-IU-OzL"/>
                             <constraint firstItem="wpq-A8-0MC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vBg-kd-9A7"/>
                         </constraints>
@@ -86,6 +103,22 @@
             </objects>
             <point key="canvasLocation" x="1862" y="88"/>
         </scene>
+        <!--Latest To Do Item-->
+        <scene sceneID="M2d-FR-c6W">
+            <objects>
+                <viewController id="8b0-Fk-mkQ" customClass="LatestToDoTaskViewController" customModule="ProductivityApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dd3-gL-nwH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="LnP-nl-Y7N"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Latest To Do Item" id="gsR-W5-4BD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fge-dI-aP6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2572" y="457"/>
+        </scene>
     </scenes>
     <resources>
         <namedColor name="AccentColor">
@@ -93,6 +126,9 @@
         </namedColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
