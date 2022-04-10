@@ -17,7 +17,7 @@ class LatestToDoTaskViewController: UIViewController {
         let label = UILabel()
         label.textAlignment = .center
         label.text = "Your latest task"
-        label.font = .systemFont(ofSize: 30, weight: .light)
+        label.font = .systemFont(ofSize: 30, weight: .semibold)
         label.textColor = .white
         return label
     }()
@@ -92,7 +92,7 @@ class LatestToDoTaskViewController: UIViewController {
              
                 label.textAlignment = .center
                 label.text = textToAdd
-                label.font = .systemFont(ofSize: 30, weight: .light)
+                label.font = .systemFont(ofSize: 30, weight: .semibold)
                 label.textColor = .white
 
                 self.view.addSubview(label)

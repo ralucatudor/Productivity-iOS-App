@@ -18,7 +18,7 @@ class FirstPageViewController: UIViewController {
         return button
     }()
     
-    let viewToAnimate = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+    let viewToAnimate = UIView(frame: CGRect(x: 0, y: 0, width: 2000, height: 2000))
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +57,7 @@ class FirstPageViewController: UIViewController {
     }
     
     @objc func animate() {
-        UIView.animate(withDuration: 2,
+        UIView.animate(withDuration: 3,
                        animations: {
                         self.viewToAnimate.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
                         self.viewToAnimate.center = self.view.center

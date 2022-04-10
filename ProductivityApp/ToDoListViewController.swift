@@ -74,11 +74,22 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
+
+        
         let model = models[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
         cell.textLabel?.text = "\u{2022} " + model.name!
         cell.textLabel?.textColor = .white
-        cell.textLabel?.font = .systemFont(ofSize: 16, weight: .bold)
+        cell.textLabel?.font = .systemFont(ofSize: 18, weight: .bold)
+        
+        // Use `DateFormatter` to convert from Date to String.
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm:ss"
+        cell.detailTextLabel?.text = "  Added at " + dateFormatter.string(from: model.createdAtDate!)
+        cell.detailTextLabel?.textColor = .white
+        cell.detailTextLabel?.font = .systemFont(ofSize: 14, weight: .regular)
+        
         return cell
     }
     
@@ -95,7 +106,7 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
         // Get the selected item.
         let selectedItem = models[indexPath.row]
         
-        let sheet = UIAlertController(title: "Edit",
+        let sheet = UIAlertController(title: selectedItem.name,
                                       message: nil,
                                       preferredStyle: .actionSheet)
         
