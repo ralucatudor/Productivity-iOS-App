@@ -31,7 +31,7 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
         // Call for getting all items in the todo list, before setting up the table view.
         getAllToDoListItems()
         
-        tableView.backgroundColor = .lightGray
+        tableView.backgroundColor = UIColor("#6699ff")
         tableView.delegate = self
         tableView.dataSource = self
         tableView.frame = view.bounds
@@ -49,10 +49,15 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
         alert.addTextField(configurationHandler: nil)
         
         // Add action to the alert.
-        alert.addAction(UIAlertAction(title: "Submit", style: .cancel, handler: { [weak self] _ in
-            guard let field = alert.textFields?.first, let text = field.text, !text.isEmpty else {
-                return
-            }
+        alert.addAction(
+            UIAlertAction(title: "Submit",
+                          style: .cancel,
+                          handler: { [weak self] _ in
+                            guard let field = alert.textFields?.first,
+                                  let text = field.text,
+                                  !text.isEmpty else {
+                                return
+                            }
             
             // if the text field is not empty, create item.
             // pay attention to possible memory leaks.
@@ -71,12 +76,15 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = models[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = model.name
+        cell.textLabel?.text = "\u{2022} " + model.name!
+        cell.textLabel?.textColor = .white
+        cell.textLabel?.font = .systemFont(ofSize: 16, weight: .bold)
         return cell
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let cellColors = ["#F0A761","#FEC362","#F0BB4C","#E3CB92","#FEA375"]
+        let cellColors = ["#99bbff", "#80aaff"]
+
         cell.contentView.backgroundColor = UIColor(cellColors[indexPath.row % cellColors.count])
     }
     
