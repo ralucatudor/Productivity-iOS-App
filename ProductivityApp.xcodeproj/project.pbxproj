@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		23E7A098BBED091ED8473BD1 /* Pods_ProductivityApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 081A164A148C868E4CA68F35 /* Pods_ProductivityApp.framework */; };
+		282574FD2812AA0A00EDBD88 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282574FC2812AA0A00EDBD88 /* Quote.swift */; };
+		282574FF2812AAAF00EDBD88 /* QuotesAlamofireService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282574FE2812AAAF00EDBD88 /* QuotesAlamofireService.swift */; };
 		28523DC42801AD0C00EB74D0 /* AlamofireService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28523DC32801AD0C00EB74D0 /* AlamofireService.swift */; };
 		28523DC62801DCFD00EB74D0 /* AlamofireReqResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28523DC52801DCFD00EB74D0 /* AlamofireReqResultsViewController.swift */; };
 		28523DC82802192600EB74D0 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28523DC72802192600EB74D0 /* Country.swift */; };
+		2875147D28119F960048205C /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2875147C28119F960048205C /* QuoteViewController.swift */; };
 		2882C03328003D6C0023AD62 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2882C03228003D6C0023AD62 /* ToDoListViewController.swift */; };
 		2882C03528003E020023AD62 /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2882C03428003E020023AD62 /* FirstPageViewController.swift */; };
 		2882C037280069C60023AD62 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2882C036280069C60023AD62 /* UIColorExtension.swift */; };
@@ -28,9 +31,12 @@
 
 /* Begin PBXFileReference section */
 		081A164A148C868E4CA68F35 /* Pods_ProductivityApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProductivityApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		282574FC2812AA0A00EDBD88 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		282574FE2812AAAF00EDBD88 /* QuotesAlamofireService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesAlamofireService.swift; sourceTree = "<group>"; };
 		28523DC32801AD0C00EB74D0 /* AlamofireService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireService.swift; sourceTree = "<group>"; };
 		28523DC52801DCFD00EB74D0 /* AlamofireReqResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireReqResultsViewController.swift; sourceTree = "<group>"; };
 		28523DC72802192600EB74D0 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		2875147C28119F960048205C /* QuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
 		2882C03228003D6C0023AD62 /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 		2882C03428003E020023AD62 /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
 		2882C036280069C60023AD62 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -62,6 +68,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2875147E28119F9F0048205C /* QuoteFunctionality */ = {
+			isa = PBXGroup;
+			children = (
+				2875147C28119F960048205C /* QuoteViewController.swift */,
+				282574FC2812AA0A00EDBD88 /* Quote.swift */,
+				282574FE2812AAAF00EDBD88 /* QuotesAlamofireService.swift */,
+			);
+			path = QuoteFunctionality;
+			sourceTree = "<group>";
+		};
 		2884DB242802C50A00972ED6 /* ToDoListFunctionality */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +143,7 @@
 				28D1816027FF66B600C256E9 /* SceneDelegate.swift */,
 				2882C03428003E020023AD62 /* FirstPageViewController.swift */,
 				28D1816427FF66B600C256E9 /* Main.storyboard */,
+				2875147E28119F9F0048205C /* QuoteFunctionality */,
 				28D1816A27FF66B800C256E9 /* Assets.xcassets */,
 				28D1816C27FF66B800C256E9 /* LaunchScreen.storyboard */,
 				28D1816F27FF66B800C256E9 /* Info.plist */,
@@ -280,13 +297,16 @@
 				28D1815F27FF66B600C256E9 /* AppDelegate.swift in Sources */,
 				28D1816127FF66B600C256E9 /* SceneDelegate.swift in Sources */,
 				28D1817727FF68D300C256E9 /* ToDoListItem+CoreDataClass.swift in Sources */,
+				2875147D28119F960048205C /* QuoteViewController.swift in Sources */,
 				2882C03528003E020023AD62 /* FirstPageViewController.swift in Sources */,
 				2882C037280069C60023AD62 /* UIColorExtension.swift in Sources */,
 				289E9A752800E340007F4B4A /* LatestToDoTaskViewController.swift in Sources */,
+				282574FF2812AAAF00EDBD88 /* QuotesAlamofireService.swift in Sources */,
 				28D1817827FF68D300C256E9 /* ToDoListItem+CoreDataProperties.swift in Sources */,
 				2882C03328003D6C0023AD62 /* ToDoListViewController.swift in Sources */,
 				28523DC42801AD0C00EB74D0 /* AlamofireService.swift in Sources */,
 				28D1816927FF66B600C256E9 /* ProductivityApp.xcdatamodeld in Sources */,
+				282574FD2812AA0A00EDBD88 /* Quote.swift in Sources */,
 				28523DC62801DCFD00EB74D0 /* AlamofireReqResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -62,6 +62,16 @@
                                     <segue destination="eop-BQ-Jea" kind="show" id="SHe-hV-lyo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R74-XI-B7u">
+                                <rect key="frame" x="175.5" y="171" width="63" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Quotes">
+                                    <color key="titleColor" systemColor="linkColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="YZq-vL-akR" kind="show" id="3zt-kL-alc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.73153895540000002" green="0.7930653043" blue="0.91374584079999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -71,7 +81,9 @@
                             <constraint firstItem="8I5-oS-wzK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hm5-m8-jR8"/>
                             <constraint firstItem="iOE-iH-psV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="300" id="IKi-sd-Se5"/>
                             <constraint firstItem="wpq-A8-0MC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UMl-IU-OzL"/>
+                            <constraint firstItem="R74-XI-B7u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="br3-PN-MI1"/>
                             <constraint firstItem="wpq-A8-0MC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vBg-kd-9A7"/>
+                            <constraint firstItem="R74-XI-B7u" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-260" id="w8O-2I-cwN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lzp-40-msd">
@@ -81,6 +93,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="963.76811594202911" y="87.723214285714278"/>
+        </scene>
+        <!--Quotes-->
+        <scene sceneID="svS-z8-VMS">
+            <objects>
+                <viewController id="YZq-vL-akR" customClass="QuoteViewController" customModule="ProductivityApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zBU-Hl-Odu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HRK-IZ-xcy">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6s9-IK-gmr"/>
+                        <color key="backgroundColor" red="0.5108848265" green="0.71200216520000004" blue="0.86933930390000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="HRK-IZ-xcy" firstAttribute="top" secondItem="6s9-IK-gmr" secondAttribute="top" id="8JM-E0-EJA"/>
+                            <constraint firstItem="6s9-IK-gmr" firstAttribute="bottom" secondItem="HRK-IZ-xcy" secondAttribute="bottom" id="8so-i3-qeL"/>
+                            <constraint firstItem="HRK-IZ-xcy" firstAttribute="leading" secondItem="6s9-IK-gmr" secondAttribute="leading" id="EVg-PC-Piq"/>
+                            <constraint firstItem="6s9-IK-gmr" firstAttribute="trailing" secondItem="HRK-IZ-xcy" secondAttribute="trailing" id="rhm-6X-nZ6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Quotes" id="gwj-YU-gZG"/>
+                    <connections>
+                        <outlet property="tblQuotes" destination="HRK-IZ-xcy" id="stn-1Y-iHs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gNq-qa-Qik" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="542" y="781"/>
         </scene>
         <!--Countries & Capitals-->
         <scene sceneID="bRk-i9-vb7">
